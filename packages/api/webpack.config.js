@@ -31,9 +31,10 @@ var config = {
   },
   plugins: [
     new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify("production"),
-        'process.env.WEB_ROOT': JSON.stringify("/dbgate"),
-    }),
+      'process.env.NODE_ENV': JSON.stringify("production"),
+      'process.env.RUN_AS_PORTAL': JSON.stringify("true"),
+      'process.env.WEB_ROOT': JSON.stringify("/dbgate"),
+  }),
     new webpack.IgnorePlugin({
       checkResource(resource) {
         const lazyImports = ['uws'];
